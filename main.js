@@ -85,7 +85,16 @@ const buscarContactosNombreOApellido = async (e) => {
       e.preventDefault();
     let query = document.getElementById('buscarNombreApellido').value.toLowerCase();
     let resultados = await getContactosNombreOApellido(query);
-    console.log(query);
+    let warning = document.getElementById('warning-buscarNombreApellido');
+    if(query === ""){
+        warning.style.display = "block";
+        warning.style.color = "red";
+        warning.style.fontWeight = "bold";
+        
+        return;
+    } else {
+        warning.style.display = "none";
+    }
 
    let divResultados = document.getElementById('resultados');
    divResultados.innerHTML = "";
@@ -101,9 +110,22 @@ const buscarContactosPorId = async (e) => {
     let id = document.getElementById('buscarId').value;  
     let resultadosId = document.getElementById('resultadosId');
     resultadosId.innerHTML = "";
+   
     let contacto = await getContactoPorId(id);
+   if(contacto.error) {
+    alert("Ha ocurrido un error")
+   }
+    let warning = document.getElementById('warning-buscarPorId');
+    if(id === ""){
+        warning.style.display = "block";
+        warning.style.color = "red";
+        warning.style.fontWeight = "bold";
+ 
+        return;
+     } else {
+         warning.style.display = "none";
+     }
     resultadosId.textContent = `${contacto.id} - ${contacto.nombre} - ${contacto.apellido} - ${contacto.domicilio} - ${contacto.email} - ${contacto.telefono}`;
-    console.log(contacto);
 }
 
 const enviarForm = async (e) => {

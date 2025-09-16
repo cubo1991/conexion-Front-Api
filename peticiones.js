@@ -72,9 +72,11 @@ const getContactoPorId = async (id) => {
     try {
         const response = await fetch(`${url}/${id}`);
         const data = await response.json();
+       
         return data;
     } catch (error) {
         console.error("Error fetching contact:", error);
+        return error
     }
 };
 
