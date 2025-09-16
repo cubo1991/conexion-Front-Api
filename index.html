@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Agenda de Contactos</title>
+    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <h1>Mi Agenda</h1>
+    <h2>Bienvenido a tu agenda personal.</h2>
+
+    <h3>Contactos</h3>
+    <section id="contactos">
+        <button id="mostrar">Mostrar Contactos</button>
+    </section>
+  
+    <button id="mostrarAgregar">Agregar Contacto</button>
+    <div id="formulario" style="display:none;">
+        
+        <h3>Agregar Nuevo Contacto</h3>
+        <form id="formContacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required><br><br>
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required><br><br>
+            <label for="domicilio">Domicilio:</label>
+            <input type="text" id="domicilio" name="domicilio" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <button type="submit">Guardar</button>
+        </form>
+
+ 
+    </div>
+    <Section>
+        <h3>Buscar Contactos</h3>
+        <form id="formBuscarNombreApellido">
+        <input type="text" id="buscarNombreApellido" placeholder="Buscar por nombre o apellido">
+        <button type="submit">Buscar</button>
+        </form>
+        <div id="resultados"></div>
+
+    </Section>
+       <Section>
+        <h2>Buscar Contactos por ID</h2>
+        <form id="formBuscarPorId">
+        <input type="text" id="buscarId" placeholder="Buscar por ID">
+        <button type="submit">Buscar</button>
+        </form>
+        <div id="resultadosId"></div>
+
+    </Section>
+
+</div>
+
+    
+</body>
+</html>

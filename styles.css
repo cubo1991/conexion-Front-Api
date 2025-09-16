@@ -1,0 +1,187 @@
+/* Estilo general */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+h2, h3 {
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+
+section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px #3498db88;
+}
+
+
+button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+
+#resultados, #resultadosId {
+    margin-top: 10px;
+    padding: 10px;
+    background: #ecf0f1;
+    border-radius: 6px;
+    min-height: 40px;
+}
+
+#formulario {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#contactos p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ecf0f1;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#contactos p:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+
+.acciones button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+
+#contactos p span:first-child {
+    flex: 1;
+    overflow-x: auto;
+}
+
+
+#resultados p, #resultadosId p {
+    background: #dfe6e9;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+
+#contactos p span:first-child, #resultados p, #resultadosId p {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+
+#mostrarAgregar {
+    display: block;
+    margin: 10px auto 20px auto;
+}
+
+form button {
+    width: fit-content;
+    align-self: flex-start;
+}
+
+
+/* Tabla de contactos */
+.tabla-contactos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.tabla-contactos th, .tabla-contactos td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.tabla-contactos th {
+    background: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+.tabla-contactos tr:nth-child(even) {
+    background: #f4f6f9;
+}
+
+.tabla-contactos tr:hover {
+    background: #d0d7de;
+}
+
+.tabla-contactos button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    border: none;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tabla-contactos button:hover {
+    background: #2980b9;
+}
